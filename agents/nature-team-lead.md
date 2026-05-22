@@ -179,7 +179,7 @@ Every specialist output must include one of these markers:
 
 ## Dependency and Fallback Rules
 
-- If a reference workflow is available, specialists may use it as a procedural reference.
+- Keep the workflow self-contained and grounded in the roles and documents present in this repository.
 - If scientific-method support is needed, borrow patterns from established research-review practice.
 - If a skill is missing, mark `DEPENDENCY_MISSING` and use the local agent SOP.
 - If external search is unavailable, provide a query plan rather than unverified literature claims.
