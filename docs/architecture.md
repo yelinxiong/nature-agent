@@ -1,12 +1,12 @@
 # Architecture
 
-Nature Agent is organized as a workflow pack rather than a monolithic tool. The Codex plugin manifest points to the skills directory, while the agent role definitions document the specialist behavior expected in each phase.
+Nature Agent is organized as a scientific workflow pack rather than a monolithic tool. The core skill defines the routing logic, while the agent role definitions document the specialist behavior expected in each phase.
 
 ## Layers
 
 ```text
 User request
-  -> nature-analysis skill
+  -> skills/SKILL.md
   -> nature-team-lead role
   -> specialist agent role definitions
   -> quality-editor gate
@@ -15,12 +15,11 @@ User request
 
 ## Components
 
-- `.codex-plugin/plugin.json`: public plugin metadata and UI-facing information.
-- `skills/nature-analysis/SKILL.md`: workflow router and operational SOP.
+- `skills/SKILL.md`: workflow router and operational SOP.
 - `agents/*.md`: reusable role definitions for specialist research tasks.
 - `rules/nature-agent_rules.md`: trigger guidance and safety constraints.
 - `scripts/*.py`: validation and optional helper scripts.
-- `legacy/codebuddy-plugin.json`: previous WorkBuddy/CodeBuddy-style manifest retained for migration.
+- `assets/screenshot-roadmap.png`: technical roadmap shown on the project page.
 
 ## Design Principles
 

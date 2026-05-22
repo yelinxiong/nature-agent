@@ -1,14 +1,11 @@
 from __future__ import annotations
 
-import json
 import pathlib
 from typing import Iterable, List
 
 BASE = pathlib.Path(__file__).resolve().parents[1]
-PLUGIN = BASE / ".codex-plugin" / "plugin.json"
-LEGACY_PLUGIN = BASE / "legacy" / "codebuddy-plugin.json"
 RULES = BASE / "rules" / "nature-agent_rules.md"
-SKILL = BASE / "skills" / "nature-analysis" / "SKILL.md"
+SKILL = BASE / "skills" / "SKILL.md"
 README = BASE / "README.md"
 
 REQUIRED_AGENTS = [
@@ -39,39 +36,11 @@ REQUIRED_MARKERS = [
 ]
 
 
-def load_json(path: pathlib.Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
 def check_paths(paths: Iterable[pathlib.Path]) -> List[str]:
     errors: List[str] = []
     for path in paths:
         if not path.exists():
             errors.append(f"missing required path: {path.relative_to(BASE)}")
-    return errors
-
-
-def check_plugin_manifest(plugin: dict) -> List[str]:
-    errors: List[str] = []
-    if plugin.get("name") != "nature-agent":
-        errors.append("plugin name must be nature-agent")
-    if plugin.get("license") != "MIT":
-        errors.append("plugin license must be MIT")
-    if plugin.get("skills") != "./skills/":
-        errors.append("plugin skills path must be ./skills/")
-    if "interface" not in plugin:
-        errors.append("plugin manifest missing interface block")
-    for field in ["homepage", "repository", "description", "author"]:
-        if field not in plugin:
-            errors.append(f"plugin manifest missing {field}")
-
-    interface = plugin.get("interface", {})
-    for field in ["displayName", "shortDescription", "longDescription", "category"]:
-        if field not in interface:
-            errors.append(f"plugin interface missing {field}")
-    for rel in [interface.get("logo"), *(interface.get("screenshots", []) or [])]:
-        if rel and not (BASE / rel).exists():
-            errors.append(f"plugin asset path does not exist: {rel}")
     return errors
 
 
@@ -106,7 +75,6 @@ def check_docs() -> List[str]:
         "Workflow D",
         "Workflow E",
         "Failure Recovery",
-        "scientific-thinking",
         "quality-editor",
         "paper-reader",
         "literature-searcher",
@@ -116,25 +84,39 @@ def check_docs() -> List[str]:
             errors.append(f"SKILL.md missing required concept: {phrase}")
 
     required_readme_phrases = [
-        ".codex-plugin/plugin.json",
-        "Legacy Compatibility",
-        "Validation Checklist",
+        "![Nature Agent technical roadmap](assets/screenshot-roadmap.png)",
+        "Team Roles",
+        "Workflows",
         "MIT",
     ]
     for phrase in required_readme_phrases:
         if phrase not in readme:
             errors.append(f"README missing required concept: {phrase}")
 
-    combined = "\n".join([rules, skill, readme])
+    combined = "\n".join([rules, skill] + [
+        (BASE / "agents" / f"{agent_id}.md").read_text(encoding="utf-8")
+        for agent_id in REQUIRED_AGENTS
+        if (BASE / "agents" / f"{agent_id}.md").exists()
+    ])
     for marker in REQUIRED_MARKERS:
         if marker not in combined:
             errors.append(f"missing required output marker: {marker}")
     return errors
 
 
+def check_removed_paths() -> List[str]:
+    errors: List[str] = []
+    for rel in [".codex-plugin", "avatars", "legacy", "skills/nature-analysis"]:
+        if (BASE / rel).exists():
+            errors.append(f"removed path still exists: {rel}")
+    return errors
+
+
 def check_text_is_ascii() -> List[str]:
     errors: List[str] = []
     for path in BASE.rglob("*"):
+        if ".git" in path.parts:
+            continue
         if path.is_dir() or path.suffix.lower() not in {".md", ".json", ".py", ".txt"}:
             continue
         text = path.read_text(encoding="utf-8")
@@ -148,25 +130,20 @@ def main() -> int:
     errors.extend(
         check_paths(
             [
-                PLUGIN,
-                LEGACY_PLUGIN,
                 RULES,
                 SKILL,
                 README,
                 BASE / "LICENSE",
                 BASE / ".gitignore",
+                BASE / "assets" / "screenshot-roadmap.png",
             ]
         )
     )
 
-    if PLUGIN.exists():
-        errors.extend(check_plugin_manifest(load_json(PLUGIN)))
-    if LEGACY_PLUGIN.exists():
-        load_json(LEGACY_PLUGIN)
-
     errors.extend(check_agent_files())
     if RULES.exists() and SKILL.exists() and README.exists():
         errors.extend(check_docs())
+    errors.extend(check_removed_paths())
     errors.extend(check_text_is_ascii())
 
     if errors:
