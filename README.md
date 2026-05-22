@@ -1,4 +1,4 @@
-# Nature Agent
+﻿# Nature Agent
 
 ![Nature Agent technical roadmap](docs/screenshot-roadmap.png)
 
@@ -57,5 +57,6 @@ paper-reader -> quality-editor -> ppt-builder -> final PPT or slide outline
 MIT. See [LICENSE](LICENSE).
 
 Author: Linxiong Ye
-
 Email: 445233812@qq.com
+
+If you would like access to the complete Nature Agent version, please feel free to contact the author by email. I would also sincerely welcome exchanges and shared learning on the development and practice of scientific AI agents.
