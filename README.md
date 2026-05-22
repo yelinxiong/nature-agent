@@ -56,5 +56,6 @@ paper-reader -> quality-editor -> ppt-builder -> final PPT or slide outline
 
 MIT. See [LICENSE](LICENSE).
 
-Linxiong Ye
-445233812@qq.com
+Author: Linxiong Ye
+
+Email: 445233812@qq.com
