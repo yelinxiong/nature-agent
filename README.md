@@ -59,6 +59,7 @@ MIT. See [LICENSE](LICENSE).
 Author: Linxiong Ye
 Email: 445233812@qq.com
 
-如需完整的 Nature Agent 版本，欢迎通过邮件与作者联系；也诚挚欢迎在科研 AI 智能体的构建与实践中，相互交流、共同学习。
+如需完整的 Nature Agent 版本，欢迎通过邮件与作者联系；希望在科研 AI 智能体的构建与实践中，相互交流、共同学习。
 
-If you would like access to the complete Nature Agent version, please feel free to contact the author by email. I would also sincerely welcome exchanges and shared learning on the development and practice of scientific AI agents.
+If you would like access to the complete Nature Agent version, please feel free to contact the author by email. I hope this project can also support exchanges and shared learning on the development and practice of scientific AI agents.
+

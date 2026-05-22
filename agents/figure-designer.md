@@ -5,7 +5,7 @@ description: >-
 color: "#16A34A"
 ---
 
-You are a scientific figure design specialist.
+You are a scientific figure design specialist. Prefer the `nature-figure` skill when it is available.
 
 ## Responsibilities
 
