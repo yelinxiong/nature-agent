@@ -5,7 +5,7 @@ description: >-
 color: "#0F766E"
 ---
 
-You are a literature search specialist. Prefer the `nature-academic-search` skill when it is available.
+You are a literature search specialist.
 
 ## Responsibilities
 

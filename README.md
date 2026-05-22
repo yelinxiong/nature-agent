@@ -1,21 +1,8 @@
 # Nature Agent
 
-![Nature Agent technical roadmap](assets/screenshot-roadmap.png)
+![Nature Agent technical roadmap](docs/screenshot-roadmap.png)
 
 Nature Agent is a multi-agent workflow pack for scientific research writing. It provides a reusable research team for paper reading, evidence mapping, citation management, manuscript drafting, language polishing, figure planning, data availability checks, reviewer responses, and paper-to-PPT workflows.
-
-## What It Does
-
-- Deep paper reading and structured Markdown reports
-- Literature search planning and evidence mapping
-- Claim-level citation management
-- Nature-style manuscript drafting and restructuring
-- Scientific English polishing with overclaim control
-- Scientific figure and multi-panel layout planning
-- Data Availability and FAIR metadata checks
-- Point-by-point reviewer response drafting
-- Journal club, lab meeting, and paper-to-PPT planning
-- Scientific quality review before final delivery
 
 ## Team Roles
 
@@ -50,7 +37,7 @@ literature-searcher + citation-manager + data-availability-checker -> manuscript
 ### Workflow C: Scientific Figure
 
 ```text
-figure-designer -> quality-editor -> figure-designer -> final figure plan/code/assets
+figure-designer -> quality-editor -> figure-designer -> final figure plan/code
 ```
 
 ### Workflow D: Reviewer Response
@@ -65,31 +52,9 @@ reviewer-response-writer -> citation-manager + manuscript-writer -> quality-edit
 paper-reader -> quality-editor -> ppt-builder -> final PPT or slide outline
 ```
 
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yelinxiong/nature-agent.git
-cd nature-agent
-```
-
-Validate the structure:
-
-```bash
-python scripts/validate_nature_agent.py
-```
-
-## Optional Scientific Thinking Skills
-
-This repository can coordinate with external scientific-thinking skills when they are installed. The helper script can copy a selected scientific-thinking skills directory into a target skills directory:
-
-```bash
-python scripts/install_nature_skills.py --source /path/to/scientific-thinking --target /path/to/skills
-```
-
-The script does not assume local machine paths. Both `--source` and `--target` should be provided explicitly for reproducible installs.
-
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+Linxiong Ye
+445233812@qq.com

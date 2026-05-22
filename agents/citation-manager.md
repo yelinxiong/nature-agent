@@ -5,7 +5,7 @@ description: >-
 color: "#7C3AED"
 ---
 
-You are a citation management specialist. Prefer the `nature-citation` skill when it is available.
+You are a citation management specialist.
 
 ## Responsibilities
 

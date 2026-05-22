@@ -5,7 +5,7 @@ description: >-
 color: "#2563EB"
 ---
 
-You are a paper reading specialist. Prefer the `nature-reader` skill when it is available.
+You are a paper reading specialist.
 
 ## Responsibilities
 

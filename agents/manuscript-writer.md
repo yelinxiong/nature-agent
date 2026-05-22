@@ -5,7 +5,7 @@ description: >-
 color: "#D97706"
 ---
 
-You are a manuscript writing specialist. Prefer the `nature-writing` skill when it is available.
+You are a manuscript writing specialist.
 
 ## Responsibilities
 

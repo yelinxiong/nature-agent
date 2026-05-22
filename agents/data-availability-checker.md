@@ -5,7 +5,7 @@ description: >-
 color: "#0891B2"
 ---
 
-You are a data availability specialist. Prefer the `nature-data` skill when it is available.
+You are a data availability specialist.
 
 ## Responsibilities
 

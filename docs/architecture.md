@@ -1,12 +1,12 @@
 # Architecture
 
-Nature Agent is organized as a scientific workflow pack rather than a monolithic tool. The core skill defines the routing logic, while the agent role definitions document the specialist behavior expected in each phase.
+Nature Agent is organized as a scientific workflow pack rather than a monolithic tool. The agent role definitions document the specialist behavior expected in each phase.
 
 ## Layers
 
 ```text
 User request
-  -> skills/SKILL.md
+  -> agents/
   -> nature-team-lead role
   -> specialist agent role definitions
   -> quality-editor gate
@@ -15,11 +15,8 @@ User request
 
 ## Components
 
-- `skills/SKILL.md`: workflow router and operational SOP.
 - `agents/*.md`: reusable role definitions for specialist research tasks.
-- `rules/nature-agent_rules.md`: trigger guidance and safety constraints.
-- `scripts/*.py`: validation and optional helper scripts.
-- `assets/screenshot-roadmap.png`: technical roadmap shown on the project page.
+- `docs/screenshot-roadmap.png`: technical roadmap shown on the project page.
 
 ## Design Principles
 

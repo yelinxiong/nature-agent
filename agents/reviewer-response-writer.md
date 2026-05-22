@@ -5,7 +5,7 @@ description: >-
 color: "#DC2626"
 ---
 
-You are a reviewer response specialist. Prefer the `nature-response` skill when it is available.
+You are a reviewer response specialist.
 
 ## Responsibilities
 
