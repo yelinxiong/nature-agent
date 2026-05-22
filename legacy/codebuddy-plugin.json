@@ -1,0 +1,213 @@
+{
+  "name": "nature-agent",
+  "version": "1.0.1",
+  "description": "Nature-style research workflow team: specialized agents coordinate paper reading, literature search, manuscript writing, polishing, figure design, citation management, data availability, reviewer response, PPT generation, and quality review.",
+  "author": {
+    "name": "WorkBuddy local"
+  },
+  "license": "MIT",
+  "expertType": "team",
+  "agentName": "nature-team-lead",
+  "teamInfo": {
+    "leadAgent": "nature-team-lead",
+    "memberAgents": [
+      "paper-reader",
+      "literature-searcher",
+      "citation-manager",
+      "manuscript-writer",
+      "language-polisher",
+      "figure-designer",
+      "data-availability-checker",
+      "reviewer-response-writer",
+      "ppt-builder",
+      "quality-editor"
+    ]
+  },
+  "agents": [
+    "./agents/nature-team-lead.md",
+    "./agents/paper-reader.md",
+    "./agents/literature-searcher.md",
+    "./agents/citation-manager.md",
+    "./agents/manuscript-writer.md",
+    "./agents/language-polisher.md",
+    "./agents/figure-designer.md",
+    "./agents/data-availability-checker.md",
+    "./agents/reviewer-response-writer.md",
+    "./agents/ppt-builder.md",
+    "./agents/quality-editor.md"
+  ],
+  "displayName": {
+    "en": "Nature Research Team",
+    "zh": "Nature Research Team"
+  },
+  "profession": {
+    "en": "Scientific Research Workflow Team",
+    "zh": "Scientific Research Workflow Team"
+  },
+  "displayDescription": {
+    "en": "A multi-agent research team inspired by Nature workflows: read papers, search literature, manage citations, draft manuscripts, polish language, design figures, prepare data availability statements, answer reviewers, build PPTs, and perform quality review.",
+    "zh": "A multi-agent research team inspired by Nature workflows: read papers, search literature, manage citations, draft manuscripts, polish language, design figures, prepare data availability statements, answer reviewers, build PPTs, and perform quality review."
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "09-ResearchWriting",
+  "defaultInitPrompt": {
+    "zh": "Turn this paper into a bilingual deep-reading report and summarize points for a journal club presentation.",
+    "en": "Turn this paper into a bilingual deep-reading report and summarize points for a journal club presentation."
+  },
+  "members": [
+    {
+      "id": "nature-team-lead",
+      "name": {
+        "en": "Nature Lead",
+        "zh": "Nature Lead"
+      },
+      "profession": {
+        "en": "Research Orchestrator",
+        "zh": "Research Orchestrator"
+      },
+      "role": "lead",
+      "avatar": "avatars/nature-team-lead.png"
+    },
+    {
+      "id": "paper-reader",
+      "name": {
+        "en": "Reader",
+        "zh": "Reader"
+      },
+      "profession": {
+        "en": "Paper Reader",
+        "zh": "Paper Reader"
+      },
+      "role": "member",
+      "avatar": "avatars/paper-reader.png"
+    },
+    {
+      "id": "literature-searcher",
+      "name": {
+        "en": "Searcher",
+        "zh": "Searcher"
+      },
+      "profession": {
+        "en": "Literature Searcher",
+        "zh": "Literature Searcher"
+      },
+      "role": "member",
+      "avatar": "avatars/literature-searcher.png"
+    },
+    {
+      "id": "citation-manager",
+      "name": {
+        "en": "Citation",
+        "zh": "Citation"
+      },
+      "profession": {
+        "en": "Citation Manager",
+        "zh": "Citation Manager"
+      },
+      "role": "member",
+      "avatar": "avatars/citation-manager.png"
+    },
+    {
+      "id": "manuscript-writer",
+      "name": {
+        "en": "Writer",
+        "zh": "Writer"
+      },
+      "profession": {
+        "en": "Manuscript Writer",
+        "zh": "Manuscript Writer"
+      },
+      "role": "member",
+      "avatar": "avatars/manuscript-writer.png"
+    },
+    {
+      "id": "language-polisher",
+      "name": {
+        "en": "Polisher",
+        "zh": "Polisher"
+      },
+      "profession": {
+        "en": "Language Polisher",
+        "zh": "Language Polisher"
+      },
+      "role": "member",
+      "avatar": "avatars/language-polisher.png"
+    },
+    {
+      "id": "figure-designer",
+      "name": {
+        "en": "Figure",
+        "zh": "Figure"
+      },
+      "profession": {
+        "en": "Figure Designer",
+        "zh": "Figure Designer"
+      },
+      "role": "member",
+      "avatar": "avatars/figure-designer.png"
+    },
+    {
+      "id": "data-availability-checker",
+      "name": {
+        "en": "Data",
+        "zh": "Data"
+      },
+      "profession": {
+        "en": "Data Availability Checker",
+        "zh": "Data Availability Checker"
+      },
+      "role": "member",
+      "avatar": "avatars/data-availability-checker.png"
+    },
+    {
+      "id": "reviewer-response-writer",
+      "name": {
+        "en": "Response",
+        "zh": "Response"
+      },
+      "profession": {
+        "en": "Reviewer Response Writer",
+        "zh": "Reviewer Response Writer"
+      },
+      "role": "member",
+      "avatar": "avatars/reviewer-response-writer.png"
+    },
+    {
+      "id": "ppt-builder",
+      "name": {
+        "en": "Slides",
+        "zh": "Slides"
+      },
+      "profession": {
+        "en": "PPT Builder",
+        "zh": "PPT Builder"
+      },
+      "role": "member",
+      "avatar": "avatars/ppt-builder.png"
+    },
+    {
+      "id": "quality-editor",
+      "name": {
+        "en": "Editor",
+        "zh": "Editor"
+      },
+      "profession": {
+        "en": "Scientific Quality Editor",
+        "zh": "Scientific Quality Editor"
+      },
+      "role": "member",
+      "avatar": "avatars/quality-editor.png"
+    }
+  ],
+  "keywords": [
+    "nature",
+    "scientific-writing",
+    "paper-reading",
+    "literature-search",
+    "citation-management",
+    "figure-design",
+    "reviewer-response",
+    "data-availability",
+    "paper-to-ppt"
+  ]
+}

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local runtime artifacts
+*.log
+*.tmp
+tmp/
+dist/
+build/
+
+# Local environment files
+.env
+.env.*
+
+# Keep generated package archives out of source
+*.zip
+*.tar.gz

@@ -1,0 +1,46 @@
+{
+  "name": "nature-agent",
+  "version": "1.0.1",
+  "description": "A Codex-compatible multi-agent workflow pack for scientific paper reading, literature search, manuscript writing, figure planning, reviewer responses, and research quality review.",
+  "author": {
+    "name": "Linxiong Ye",
+    "email": "445233812@qq.com",
+    "url": "https://github.com/yelinxiong"
+  },
+  "homepage": "https://github.com/yelinxiong/nature-agent",
+  "repository": "https://github.com/yelinxiong/nature-agent",
+  "license": "MIT",
+  "keywords": [
+    "scientific-writing",
+    "paper-reading",
+    "literature-search",
+    "citation-management",
+    "figure-design",
+    "reviewer-response",
+    "data-availability",
+    "paper-to-ppt",
+    "research-agent"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Nature Research Team",
+    "shortDescription": "Scientific writing and paper workflow agents.",
+    "longDescription": "A research workflow pack for deep paper reading, evidence mapping, citation management, manuscript drafting, language polishing, scientific figures, data availability checks, reviewer responses, and paper-to-PPT workflows.",
+    "developerName": "Linxiong Ye",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Turn this paper into a deep-reading report.",
+      "Draft a point-by-point reviewer response.",
+      "Plan a Nature-style multi-panel figure."
+    ],
+    "brandColor": "#2563EB",
+    "logo": "./avatars/team.png",
+    "screenshots": [
+      "./assets/screenshot-roadmap.png"
+    ]
+  }
+}
